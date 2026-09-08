@@ -15,6 +15,15 @@ export default function Kevin() {
         <p className="mt-10 text-3xl text-gray-300">
           And my mornings gave me back everything else.
         </p>
+
+        <a
+          href="https://www.youtube.com/watch?v=n52CXHAbqKE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-12 rounded-full bg-white text-black px-8 py-4 text-lg hover:opacity-90 transition"
+        >
+          Watch Kevin in Action →
+        </a>
       </div>
     </section>
   );
