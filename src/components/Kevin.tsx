@@ -1,29 +1,64 @@
+import { links } from "@/lib/portfolio";
+import { Tags } from "./SiteChrome";
 export default function Kevin() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black text-white px-8 py-32">
-      <div className="max-w-5xl text-center">
-        <p className="uppercase tracking-[0.3em] text-gray-400 mb-10">
-          Executive Intelligence System
-        </p>
-
-        <h2 className="text-6xl md:text-8xl font-bold leading-tight">
-          Kevin gave me
-          <br />
-          my mornings back.
-        </h2>
-
-        <p className="mt-10 text-3xl text-gray-300">
-          And my mornings gave me back everything else.
-        </p>
-
-        <a
-          href="https://www.youtube.com/watch?v=n52CXHAbqKE"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-12 rounded-full bg-white text-black px-8 py-4 text-lg hover:opacity-90 transition"
-        >
-          Watch Kevin in Action →
-        </a>
+    <section
+      id="kevin"
+      className="section dark kevin"
+      aria-labelledby="kevin-title"
+    >
+      <div className="container">
+        <p className="eyebrow">03 / Kevin · Multi-agent AI chief of staff</p>
+        <div className="split">
+          <div>
+            <h2 id="kevin-title">
+              Kevin gave me
+              <br />
+              my mornings back<span className="accent">.</span>
+            </h2>
+            <p className="subtitle">And that was the point.</p>
+            <a
+              className="button"
+              href={links.kevin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Watch Kevin in action ↗
+            </a>
+          </div>
+          <div>
+            <p>
+              Kevin began with a question: could I build an AI system that
+              didn’t just answer questions, but actually coordinate work?
+            </p>
+            <p>
+              It evolved into a modular multi-agent system supporting Rovana
+              Studio operations through research, creative direction, design
+              specifications, and image-generation workflows.
+            </p>
+            <p>
+              Specialized agents coordinate through a CLI dispatcher and
+              structured JSON handoffs. Gmail and Google Calendar integrations
+              support email triage, contextual drafts, and scheduled executive
+              briefings.
+            </p>
+            <p className="small muted">
+              Built with OAuth 2.0 token refresh/recovery, API retries, and
+              scheduled execution.
+            </p>
+          </div>
+        </div>
+        <Tags
+          items={[
+            "Python",
+            "Anthropic Claude SDK",
+            "Gemini",
+            "Gmail API",
+            "Google Calendar API",
+            "OAuth 2.0",
+            "Cron",
+          ]}
+        />
       </div>
     </section>
   );

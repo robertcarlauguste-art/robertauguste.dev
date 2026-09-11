@@ -1,61 +1,67 @@
+const stages = [
+  ["Workflow automation", "Zapier-based AI content and media pipelines"],
+  [
+    "Rovana Studio / Listing Factory",
+    "Business automation and direct API integration",
+  ],
+  ["Kevin", "Multi-agent orchestration and external-service integrations"],
+  [
+    "ConversationOS",
+    "Full-stack AI, persistent memory, and semantic retrieval",
+  ],
+  [
+    "JobOps AI",
+    "Grounded RAG, provenance validation, and multi-tenant deployment",
+  ],
+];
 export default function Story() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-neutral-50">
-      <div className="max-w-4xl">
-
-        <p className="uppercase tracking-[0.3em] text-gray-500 mb-8">
-          My Story
-        </p>
-
-        <h2 className="text-5xl md:text-7xl font-bold leading-tight">
-          It started
-          <br />
-          with 45 minutes.
-        </h2>
-
-        <div className="mt-16 max-w-3xl space-y-8 text-2xl leading-relaxed text-gray-700">
-
-          <p>
-            Every morning before work, I found myself with about forty-five
-            minutes of free time.
-          </p>
-
-          <p>
-            At first, I used those mornings to exercise. I lost weight, became
-            healthier, and felt more energized than I had in years.
-          </p>
-
-          <p>
-            But the biggest transformation wasn&apos;t physical.
-          </p>
-
-          <p>
-            Those forty-five minutes taught me something unexpected.
-          </p>
-
-          <p className="text-3xl font-semibold text-black">
-            Time isn&apos;t something we find.
-          </p>
-
-          <p className="text-3xl font-semibold text-black">
-            It&apos;s something we create.
-          </p>
-
-          <p>
-            That realization completely changed the way I looked at repetitive
-            work.
-          </p>
-
-          <p>
-            If reclaiming forty-five minutes could change my own life, what
-            could intelligent systems do for everyone else?
-          </p>
-
-          <p>
-            That question became the foundation for everything I build today.
-          </p>
-
+    <section id="why" className="section story" aria-labelledby="story-title">
+      <div className="container">
+        <p className="eyebrow">04 / Engineering journey</p>
+        <div className="split">
+          <div>
+            <h2 id="story-title">
+              It started with
+              <br />
+              45 minutes.
+            </h2>
+            <p>
+              Every morning before work, I found myself with about forty-five
+              minutes of free time. At first, I used those mornings to exercise.
+              I became healthier and had more energy.
+            </p>
+            <p>
+              But the bigger lesson wasn’t physical. Those forty-five minutes
+              changed how I thought about time.
+            </p>
+            <blockquote>
+              Time isn’t something we find.
+              <br />
+              It’s something we create.
+            </blockquote>
+            <p>
+              If reclaiming forty-five minutes could make that much difference
+              in my own life, what could intelligent systems do for other
+              people?
+            </p>
+          </div>
+          <ol className="journey">
+            {stages.map(([title, copy], i) => (
+              <li key={title}>
+                <span className="journey-number">0{i + 1}</span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{copy}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
+        <p className="journey-closing">
+          Each project forced me to solve a harder class of problem—and pushed
+          me deeper into software and AI engineering.
+        </p>
       </div>
     </section>
   );

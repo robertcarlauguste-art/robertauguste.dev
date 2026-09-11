@@ -1,36 +1,28 @@
-# robertauguste.dev
+# Robert Auguste — Portfolio v2
 
-Personal portfolio for Robert Carl Auguste — built with Next.js 16 (App Router),
-React 19, Tailwind CSS v4, and Framer Motion.
+Next.js App Router portfolio positioning Robert Carl Auguste as an Applied AI Engineer. Built on the existing React, TypeScript, Tailwind, Geist, and Netlify foundation.
 
-The site walks through the story behind building intelligent systems (Kevin,
-ConversationOS) that eliminate repetitive work for professionals.
+## Development
 
-## Stack
+- `npm ci`
+- `npm run dev` (http://localhost:3000)
+- `npm run lint`
+- `npm run build`
+- `npm run start`
 
-- **Framework**: Next.js 16 (Turbopack)
-- **UI**: React 19, Tailwind CSS v4
-- **Motion**: Framer Motion
-- **Language**: TypeScript
+## Content and routes
 
-## Getting Started
+- `/`: Applied AI Engineer hero, flagship JobOps, ConversationOS, Kevin, Engineering Journey, About/toolkit, selected credentials, contact.
+- `/projects/jobops-ai`: engineering case study.
+- `src/lib/portfolio.ts`: verified external links, technology lists, and selected credentials.
+- `public/Robert_Auguste_Resume_v38.pdf`: actual supplied v38 résumé.
+- `src/components`: reusable page sections and site navigation/footer.
+- `src/app/globals.css`: responsive monochrome/cyan theme, keyboard focus, reduced motion, and print treatment.
 
-```bash
-npm install
-npm run dev
-```
+All principal portfolio content is server rendered and statically prerendered. It does not depend on animation or client JavaScript for visibility. Résumé text remains searchable in the original PDF.
 
-Open [http://localhost:3000](http://localhost:3000) to view the site locally.
+See [PORTFOLIO_V2_AUDIT.md](./PORTFOLIO_V2_AUDIT.md) for audit findings, factual sources, missing assets, and the deployment checklist.
 
-## Scripts
+## Existing deployment
 
-- `npm run dev` — start the local dev server
-- `npm run build` — production build
-- `npm run start` — serve the production build
-- `npm run lint` — run ESLint
-
-## Project Structure
-
-- `src/app` — routes, layout, and metadata (including generated icon/OG image)
-- `src/components` — page sections (`Hero`, `Why`, `Story`, `Kevin`, `ConversationOS`)
-- `src/components/ui` — shared building blocks (`WorkflowCard`, `WorkflowConnector`)
+The repository's `netlify.toml` is retained. Build command: `npm run build`; publish directory: `.next`; existing Netlify Next.js plugin. Set `SITE_URL=https://robertauguste.dev` in Netlify; the canonical production origin is also the code fallback. No DNS or domain changes are needed if the existing GitHub/Netlify connection is still active.

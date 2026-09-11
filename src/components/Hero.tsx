@@ -1,30 +1,59 @@
+import { links } from "@/lib/portfolio";
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-white text-black flex items-center justify-center px-8">
-      <div className="max-w-4xl text-center">
-        <p className="text-lg text-gray-500 mb-6">
-          Robert Carl Auguste
-        </p>
-
-        <h1 className="text-6xl md:text-8xl font-bold leading-tight">
-          Helping professionals
-          <br />
-          buy back their time.
-        </h1>
-
-        <p className="mt-10 text-xl text-gray-600 max-w-2xl mx-auto">
-          I build intelligent systems that eliminate repetitive work,
-          simplify complex workflows, and give people more time to focus
-          on what matters most.
-        </p>
-
-        <a
-  href="#why"
-  className="inline-block mt-12 rounded-full bg-black text-white px-8 py-4 text-lg hover:opacity-90 transition"
->
-  Start the Journey
-</a>
+    <section className="hero container" aria-labelledby="hero-title">
+      <div className="hero-topline">
+        <p className="eyebrow">Robert Carl Auguste / Applied AI Engineer</p>
+        <span className="location">New Jersey</span>
       </div>
+      <h1 id="hero-title">
+        Applied AI Engineer
+        <br />
+        building systems that
+        <br />
+        <span>give people their time back.</span>
+      </h1>
+      <div className="hero-bottom">
+        <div>
+          <p className="lead">
+            I build full-stack AI applications, grounded RAG systems, and
+            intelligent agents using Python, FastAPI, PostgreSQL/pgvector,
+            Next.js, and modern LLM APIs.
+          </p>
+          <p className="muted">
+            Practical AI: turning repetitive workflows and unstructured
+            information into reliable software people can actually use.
+          </p>
+          <div className="actions">
+            <a className="button" href="#work">
+              View my work ↓
+            </a>
+            <a className="button secondary" href={links.resume} download>
+              Download résumé ↗
+            </a>
+          </div>
+        </div>
+        <div className="hero-aside">
+          <span className="eyebrow">The work, at a glance</span>
+          <a href="#work">
+            <span>01</span> Grounded RAG
+          </a>
+          <a href="#conversation-os">
+            <span>02</span> Persistent memory
+          </a>
+          <a href="#kevin">
+            <span>03</span> Intelligent agents
+          </a>
+          <div className="text-links">
+            <a href={links.github}>GitHub ↗</a>
+            <a href={links.linkedin}>LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+      <p className="discipline-strip">
+        RAG <span>·</span> AI Agents <span>·</span> Semantic Retrieval{" "}
+        <span>·</span> Full-Stack AI <span>·</span> Automation
+      </p>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Header, Footer } from "@/components/SiteChrome";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,12 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "Robert Carl Auguste — Systems That Buy Back Your Time";
+const siteTitle = "Robert Carl Auguste — Applied AI Engineer";
 const siteDescription =
-  "Robert Carl Auguste builds intelligent systems—like Kevin and ConversationOS—that eliminate repetitive work and give professionals more time for what matters most.";
+  "Applied AI Engineer building full-stack AI applications, grounded RAG systems, and intelligent agents with Python, FastAPI, PostgreSQL/pgvector, and Next.js.";
 
 export const metadata: Metadata = {
-  metadataBase: process.env.SITE_URL ? new URL(process.env.SITE_URL) : undefined,
+  metadataBase: new URL(process.env.SITE_URL || "https://robertauguste.dev"),
   title: {
     default: siteTitle,
     template: "%s | Robert Carl Auguste",
@@ -45,7 +46,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
